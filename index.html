@@ -183,6 +183,13 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+
+    .qr-codes { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 20px; }
+    .qr-codes figure { margin: 0; text-align: center; }
+    .qr-codes .qr-image { display: inline-block; max-width: 100%; border-radius: 6px; background: #fff; padding: 12px; }
+    .qr-codes img { display: block; width: 200px; max-width: 100%; height: auto; }
+    .qr-codes figcaption { margin-top: 8px; font-weight: 600; }
+    .qr-hint { color: var(--muted); font-size: 14px; }
   </style>
 </head>
 <body>
@@ -333,6 +340,25 @@
         <div><dt>Machine learning: </dt><dd>PyTorch, TensorFlow, Scikit-learn</dd></div>
         <div><dt>Tools &amp; platforms: </dt><dd>CUDA, Linux, Git</dd></div>
       </dl>
+    </section>
+
+    <section id="qr-codes" aria-labelledby="qr-title">
+      <h2 id="qr-title">Scan to connect</h2>
+      <p class="qr-hint">Scan a code to open my website, LinkedIn, or CV.</p>
+      <div class="qr-codes">
+        <figure>
+          <div class="qr-image"><img src="assets/QR_WEB.png" width="285" height="284" alt="QR code for my website" loading="lazy"></div>
+          <figcaption>Website</figcaption>
+        </figure>
+        <figure>
+          <div class="qr-image"><img src="assets/QR_Linkedin.jpg" width="480" height="480" alt="QR code for my LinkedIn profile" loading="lazy"></div>
+          <figcaption>LinkedIn</figcaption>
+        </figure>
+        <figure>
+          <div class="qr-image"><img src="assets/QR_CV.png" width="288" height="292" alt="QR code for my CV" loading="lazy"></div>
+          <figcaption>CV</figcaption>
+        </figure>
+      </div>
     </section>
 
     <footer class="footer">© 2026 Soroosh Noorzad · University of Utah</footer>
